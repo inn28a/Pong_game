@@ -20,8 +20,8 @@ const PADDLE_STEP = 3;
 const BALL_R = 15;
 const BALL_START_X = CANVAS_WIDTH / 2;
 const BALL_START_Y = CANVAS_HEIGHT / 2;
-const BALL_START_DX = 4.5;
-const BALL_START_DY = 1.5;
+const BALL_START_DX = 7.5;
+const BALL_START_DY = 2.5;
 
 const STATE_CHANGE_INTERVAL = 20;
 //action buttons
