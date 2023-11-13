@@ -1,6 +1,7 @@
 window.addEventListener('load' , () => {
 const canvas = document.getElementById("pong");
 const ctx = canvas.getContext("2d");
+ctx.fillStyle = "white";
 //constants
 const CANVAS_HEIGHT = canvas.height;
 const CANVAS_WIDTH = canvas.width;
@@ -178,6 +179,7 @@ class Paddle {
   draw() {
     ctx.fillRect(this.x, this.y, PADDLE_WIDTH, PADDLE_HEIGHT);
   }
+
 }
 
 class Player {
@@ -221,6 +223,19 @@ class Game {
 
   drawState() {
     clearCanvas();
+   // added dashed line in the middle of the board
+    ctx.strokeStyle = "white";
+    ctx.setLineDash([10, 10]);
+    ctx.beginPath();
+    ctx.moveTo(canvas.width / 2, 0);
+    ctx.lineTo(canvas.width / 2, canvas.height);
+    ctx.stroke();
+    ctx.setLineDash([]);
+    //added players names 
+    ctx.font = "20px Arial";
+    ctx.fillText("Player 1", canvas.width / 4, 30);
+    ctx.fillText("Player 2", (canvas.width * 3) / 4, 30); 
+
     this.ball.draw();
     this.p1.draw();
     this.p2.draw();
@@ -268,13 +283,30 @@ class Game {
 }
 Game.prototype.endGame = endGame;
 
-const startButton = document.getElementById("startButton");
 let gameInterval;
-startButton.addEventListener('click', () => {
-  const game = new Game();
-  gameInterval = setInterval(() => game.updateAndDrawState(), STATE_CHANGE_INTERVAL);
-  game.setupControl();
-  startButton.disabled = true;
+  let game; 
+  let messageElement = document.getElementById('message');
+
+  const startGame = () => {
+    game = new Game();
+    gameInterval = setInterval(() => game.updateAndDrawState(), STATE_CHANGE_INTERVAL);
+    game.setupControl();
+    startButton.disabled = true;
+    messageElement.classList.add('hidden');
+  };
+
+  const restartGame = () => {
+    clearInterval(gameInterval);
+    messageElement.classList.add('hidden'); 
+    startGame(); 
+  };
+
+  const startButton = document.getElementById("startButton");
+  startButton.addEventListener('click', startGame);
+
+  const restartButton = document.getElementById("restartButton");
+  restartButton.addEventListener('click', restartGame);
 });
 
-});
+
+
