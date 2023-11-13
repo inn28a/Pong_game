@@ -67,6 +67,14 @@ function clearCanvas() {
   ctx.clearRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
 }
 
+function endGame() {
+  const winner = this.p1.points == 5 ? "Player 1" : "Player 2";
+  const messageElement = document.getElementById('message');
+  const messageTextElement = document.getElementById('messageText');
+  messageTextElement.textContent = `${winner} wins the game!`;
+  messageElement.classList.remove('hidden');
+  clearInterval(gameInterval); 
+}
 
 class Ball {
   constructor() {
@@ -222,6 +230,10 @@ class Game {
    
     this.nextState();
     this.drawState();
+
+    if (this.p1.points == 5 || this.p2.points == 5) {
+      this.endGame();
+    }
   }
 
   setupControl() {
@@ -252,8 +264,17 @@ class Game {
     setInterval(this.updateAndDrawState.bind(this), STATE_CHANGE_INTERVAL);
     this.setupControl();
   }
-}
 
-const game = new Game();
-game.start();
+}
+Game.prototype.endGame = endGame;
+
+const startButton = document.getElementById("startButton");
+let gameInterval;
+startButton.addEventListener('click', () => {
+  const game = new Game();
+  gameInterval = setInterval(() => game.updateAndDrawState(), STATE_CHANGE_INTERVAL);
+  game.setupControl();
+  startButton.disabled = true;
+});
+
 });

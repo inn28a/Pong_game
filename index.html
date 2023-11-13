@@ -8,7 +8,13 @@
     <script src="logic.js"></script>
     <link rel="stylesheet" href="styles.css">
     </head>
-    <body>              
-        <canvas id="pong" width="800" height="500" style="border:1px solid"></canvas>
+    <body>       
+        <div class="game-container">       
+        <canvas id="pong" width="800" height="500" style="border:1px solid"></canvas>        
+        </div>
+        <button id="startButton">Start</button>
+        <div id="message" class="hidden">
+            <p id="messageText">Player X wins the game!</p>
+        </div>
     </body>
 </html>

@@ -1,0 +1,54 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    background-image: linear-gradient(to right, #2a363b, #e84a5f, #99b898);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.game-container {
+    position: relative;
+    text-align: center;
+}
+
+#startButton {
+    background-color: rgb(255, 255, 255);
+    border: none;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+    position: absolute;
+    top: 5%; /* Umieszczenie przycisku na środku planszy (poziomo) */
+    left: 50%; /* Umieszczenie przycisku na środku planszy (pionowo) */
+    
+}
+
+#startButton:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+#pong {
+    border: 1px solid;
+    z-index: 1;
+}
+
+#message {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    color: white;
+}
+
+.hidden {
+    display: none;
+}
