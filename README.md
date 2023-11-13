@@ -19,8 +19,7 @@ Project is created with:
 
 ## Overview
 
-![PongGame]https://github.com/inn28a/Pong_game/assets/49073623/656a2c58-2c9c-45ec-b3d1-b5642dc73d53
-
+![PongGame](https://github.com/inn28a/Pong_game/assets/49073623/656a2c58-2c9c-45ec-b3d1-b5642dc73d53)
 
 
 ### Acknowledgements
