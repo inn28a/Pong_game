@@ -22,6 +22,6 @@ Project is created with:
 ![PongGame](https://github.com/inn28a/Pong_game/assets/49073623/656a2c58-2c9c-45ec-b3d1-b5642dc73d53)
 
 
-### Acknowledgements
+#### Acknowledgements
 
-* [Project based on "JavaScript od podstaw" Marcin Moskala]([https://www.udemy.com/course/web-developer-bootcamp-tworzenie-stron-www-od-zera-do-mastera/](https://ksiegarnia.pwn.pl/JavaScript-od-podstaw,908984459,p.html?cq_src=google_ads&cq_cmp=20570707846&cq_term=&cq_plac=&cq_net=g&cq_plt=gp&cq_src=google_ads&cq_cmp=20570707846&cq_term=&cq_plac=&cq_net=g&cq_plt=gp&gclid=EAIaIQobChMI182hgqHBggMV1YZoCR2QuQAKEAQYAiABEgKIYPD_BwE)https://ksiegarnia.pwn.pl/JavaScript-od-podstaw,908984459,p.html?cq_src=google_ads&cq_cmp=20570707846&cq_term=&cq_plac=&cq_net=g&cq_plt=gp&cq_src=google_ads&cq_cmp=20570707846&cq_term=&cq_plac=&cq_net=g&cq_plt=gp&gclid=EAIaIQobChMI182hgqHBggMV1YZoCR2QuQAKEAQYAiABEgKIYPD_BwE)
+* [Project based on "JavaScript od podstaw" Marcin Moskala]
